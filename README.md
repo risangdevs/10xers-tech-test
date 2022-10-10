@@ -1,1 +1,0 @@
-# 10xers-tech-test
