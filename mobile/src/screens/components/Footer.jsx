@@ -1,14 +1,16 @@
-import {Text, View, Image} from 'react-native';
-import {Icon} from '@rneui/themed';
+import {Text, View, Image, Button, Pressable} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 export default function Footer() {
   return (
     <View className="" style={{height: 80}}>
       <View className="border-t-2 border-slate-300 flex flex-row justify-center py-4">
         <View className="p-2">
-          <Icon name="server" type="feather" />
+          {/* <Icon name="rocket" size={30} color="#900" />
           <Text className="font-bold mt-2">Tasks</Text>
+           */}
+           <Pressable className="rounded-xl bg-emerald-200 w-20 h-10 justify-center items-center"><Text>Collection</Text></Pressable>
         </View>
-        <View className="p-2">
+        {/* <View className="p-2">
           <Icon name="clipboard-play" type="material-community" />
           <Text className="font-bold mt-2">Projects</Text>
         </View>
@@ -23,7 +25,7 @@ export default function Footer() {
         <View className="p-2">
           <Icon name="account" type="material-community" />
           <Text className="font-bold mt-2">Account</Text>
-        </View>
+        </View> */}
       </View>
     </View>
   );
