@@ -1,6 +1,10 @@
 {
+  "name": "mobile",
+  "displayName": "mobile",
   "expo": {
     "name": "mobile",
-    "slug": "mobile"
+    "slug": "mobile",
+    "sdkVersion": "45.0.0",
+    "ios": {"jsEngine": "hermes"}
   }
 }

@@ -1,8 +1,11 @@
+b/ios/Podfile
 require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 platform :ios, '12.4'
+require 'json'
+podfile_properties = JSON.parse(File.read('./Podfile.properties.json')) rescue {}
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'mobile' do
@@ -24,7 +27,8 @@ target 'mobile' do
     # Hermes is now enabled by default. Disable by setting this flag to false.
     # Upcoming versions of React Native may rely on get_default_flags(), but
     # we make it explicit here to aid in the React Native upgrade process.
-    :hermes_enabled => true,
+    # :hermes_enabled => true,
+    :hermes_enabled => podfile_properties['expo.jsEngine'] == 'hermes'
     :fabric_enabled => flags[:fabric_enabled],
     # Enables Flipper.
     #
