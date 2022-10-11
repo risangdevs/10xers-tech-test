@@ -12,3 +12,5 @@ how to start the APPS:
 
 video recording url: 
 ``https://drive.google.com/file/d/1uU5AWd8OTcbkrhflV9d5gHs7VbnUS0Ip/view?usp=sharing``
+
+expo publish url:``https://expo.dev/@risangdevs/mobile``
