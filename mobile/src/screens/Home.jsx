@@ -47,8 +47,8 @@ export default function Home({navigation}) {
     // setCol(Collection.getCollection())
   }, []);
   // console.log(col);
-  const toDetail = ({name}) => {
-    navigation.navigate('detail', {name});
+  const toDetail = ({name,token}) => {
+    navigation.navigate('detail', {name,token});
   };
   return (
     <View style={{top: top}}>
@@ -64,7 +64,9 @@ export default function Home({navigation}) {
             return (
               <Pressable
                 key={i}
-                onPress={() => toDetail({name: Object.keys(e)})}>
+                onPress={() =>
+                  toDetail({name: Object.keys(e), token: e[Object.keys(e)]})
+                }>
                 <View className="border-2 border-emerald-400 p-4 mx-2 my-4 rounded-lg">
                   <Text className="text-lg font-bold mb-2">
                     {Object.keys(e)}
